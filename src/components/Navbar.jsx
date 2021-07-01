@@ -29,6 +29,7 @@ const Navbar = () => {
         dispatch(setUserData(null));
     };
 
+   
     return (
         <nav className="navbar">
             <h1 className="navbar__header">Bloggy 💬</h1>
@@ -54,7 +55,7 @@ const Navbar = () => {
                     />
                     <h1 className="signedIn">{userData?.givenName}</h1>
                     <GoogleLogout
-                        clientId={process.env.G_TOKEN}
+                        clientId={import.meta.env.VITE_G_TOKEN}
                         onLogoutSuccess={logout}
                         render={(props) => {
                             return (

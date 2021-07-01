@@ -8,7 +8,7 @@ import {
 } from "../features/userSlice";
 
 import "../styles/homepage.css";
-import Blogspage from "./Blogspage";
+
 
 const Homepage = () => {
     const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const Homepage = () => {
                         logs. Just sign up and start reading some quality blogs.
                     </p>
                     <GoogleLogin
-                        clientId={process.env.G_TOKEN}
+                        clientId={import.meta.env.VITE_G_TOKEN}
                         render={(props) => {
                             return (
                                 <button

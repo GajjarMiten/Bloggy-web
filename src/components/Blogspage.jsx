@@ -6,7 +6,7 @@ import "../styles/blogspage.css";
 
 const Blogspage = () => {
     const searchInput = useSelector(selectUserInput);
-    const URL = `https://gnews.io/api/v4/search?q=${searchInput}&token=${process.env.API_TOKEN}`;
+    const URL = `https://gnews.io/api/v4/search?q=${searchInput}&token=${import.meta.env.VITE_API_TOKEN}`;
     const dispatch = useDispatch();
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
